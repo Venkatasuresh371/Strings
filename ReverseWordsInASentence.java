@@ -2,35 +2,17 @@ package com.jsp.strings;
 
 public class ReverseWordsInASentence
 {
-	public static void main(String[] args)
-	{
-		String s1="java is an oop language";
-		String s2="";
-		char [] a = s1.toCharArray();
-		int i=a.length-1;
-		int j=a.length-1;
-		while(i>=0)
+	public static String reverseString(String str){
+		// char ch[] = str.toCharArray();
+		String rev="";
+		for(int i=str.length()-1;i>=0;i--)
 		{
-			while(i>=0 && a[i]!=' ')
-			{
-				i--;
-			}
-			String temp="";
-			int k=i+1;
-			while(j>=k)
-			{
-				temp=temp+a[j];
-				j--;
-			}
-			s2=s2+temp;
-			if(i>=0)
-				s2+=" ";
-			i--;
-			j=i;
+			rev+=str.charAt(i);
 		}
-		System.out.println(s1);
-		System.out.println(s2);
+		return rev;
 	}
-	
-
+	public static void main(String[] args){
+		System.out.println(reverseString("my name is khan"));
+	}
 }
+
